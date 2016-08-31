@@ -19,6 +19,22 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func leftSwiped() {
+        NSLog("leftSwiped");
+    }
+    
+    @IBAction func rightSwiped() {
+        NSLog("rightSwiped");
+    }
+    
+    @IBAction func upSwiped() {
+        NSLog("upSwiped");
+    }
+    
+    @IBAction func downSwiped() {
+        NSLog("downSwiped");
+    }
 
 
 }

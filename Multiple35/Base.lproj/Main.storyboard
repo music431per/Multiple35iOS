@@ -18,6 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="point : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihJ-Kv-bUj">
+                                <rect key="frame" x="265" y="149" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4J-aH-etj">
+                                <rect key="frame" x="271" y="120" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pip-8F-cdG">
+                                <rect key="frame" x="265" y="265" width="70" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.96862745098039216" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="8YI-Lo-deJ"/>
+                                    <constraint firstAttribute="height" constant="70" id="y0d-oZ-x55"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="x5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNS-c8-6ak">
                                 <rect key="frame" x="0.0" y="0.0" width="70" height="600"/>
                                 <color key="backgroundColor" red="0.90980392156862744" green="0.72156862745098038" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,31 +100,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pip-8F-cdG">
-                                <rect key="frame" x="265" y="265" width="70" height="70"/>
-                                <color key="backgroundColor" red="1" green="0.96862745098039216" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="8YI-Lo-deJ"/>
-                                    <constraint firstAttribute="height" constant="70" id="y0d-oZ-x55"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4J-aH-etj">
-                                <rect key="frame" x="271" y="120" width="58" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="point : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihJ-Kv-bUj">
-                                <rect key="frame" x="265" y="149" width="70" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="BNS-c8-6ak" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1QO-pv-GPJ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Z9-wi-FLy" secondAttribute="bottom" id="2J9-ne-htV"/>
@@ -130,9 +131,35 @@
                             <constraint firstAttribute="trailingMargin" secondItem="kka-Zd-qJI" secondAttribute="trailing" constant="-20" id="vQF-tg-oqC"/>
                             <constraint firstItem="3iN-u4-cx9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="zrh-Yx-3RH"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="DdB-qm-ea9" appends="YES" id="2oX-Op-hDz"/>
+                            <outletCollection property="gestureRecognizers" destination="VTz-n6-DEQ" appends="YES" id="Pei-YD-ESs"/>
+                            <outletCollection property="gestureRecognizers" destination="rbv-Vj-Cdy" appends="YES" id="g5u-ui-FPW"/>
+                            <outletCollection property="gestureRecognizers" destination="me4-KD-lCt" appends="YES" id="OC5-yO-AUz"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="DdB-qm-ea9">
+                    <connections>
+                        <action selector="leftSwiped" destination="BYZ-38-t0r" id="dea-LP-O2c"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="VTz-n6-DEQ">
+                    <connections>
+                        <action selector="upSwiped" destination="BYZ-38-t0r" id="mnv-LH-3aT"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="rbv-Vj-Cdy">
+                    <connections>
+                        <action selector="rightSwiped" destination="BYZ-38-t0r" id="Due-8C-eHJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="me4-KD-lCt">
+                    <connections>
+                        <action selector="downSwiped" destination="BYZ-38-t0r" id="iGZ-RS-T1e"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="374" y="324"/>
         </scene>
