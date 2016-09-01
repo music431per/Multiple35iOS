@@ -139,7 +139,9 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="numberLabel" destination="pip-8F-cdG" id="Zc9-L0-rLI"/>
+                        <outlet property="numberLabel" destination="pip-8F-cdG" id="E1s-tf-kDK"/>
+                        <outlet property="pointLabel" destination="ihJ-Kv-bUj" id="XaF-8a-35a"/>
+                        <outlet property="timeLabel" destination="F4J-aH-etj" id="xXT-Ns-e2N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -12,15 +12,23 @@ class ViewController: UIViewController {
     
 
     @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var pointLabel: UILabel!
     
     var positionX : CGFloat!
     var positionY : CGFloat!
+    
+    var number: UInt32!
+    var point: Int!
+    var time: Float!
+    var baseTime: Float!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        reset()
+        createNumber()
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,9 +86,76 @@ class ViewController: UIViewController {
                 // アニメーション終了後の処理
                 self.numberLabel.frame.origin.x = self.positionX
                 self.numberLabel.frame.origin.y = self.positionY
+                self.nextTurn(direction)
+                
         })
+
+    }
+    
+    func createNumber() {
+        self.number = arc4random_uniform(100)
+        self.numberLabel.text = String(self.number)
+    }
+    
+    func reset() {
+        point = 0
+        baseTime = 60
+        
+    }
+    
+    func nextTurn(direction:Int) {
+        decision(direction)
+        createNumber()
+        pointLabel.text = "point : " + String(point)
+    }
+    
+    // 判定処理
+    func decision(direction:Int) {
+        switch direction {
+        case 1:
+            if !check3() && check5() {
+                point = point + 1
+            } else {
+                baseTime = baseTime - 3
+            }
+        case 2:
+            if !check3() && !check5() {
+                point = point + 1
+            } else {
+                baseTime = baseTime - 3
+            }
+        case 3:
+            if check3() && !check5() {
+                point = point + 1
+            } else {
+                baseTime = baseTime - 3
+            }
+        case 4:
+            if check3() && check5() {
+                point = point + 1
+            } else {
+                baseTime = baseTime - 3
+            }
+        default:
+            return
+        }
     }
 
+    // 5の倍数ならtrue
+    func check5() -> Bool {
+        if number % 5 == 0 {
+            return true
+        }
+        return false
+    }
+    
+    // 3の倍数ならtrue
+    func check3() -> Bool {
+        if number % 3 == 0 {
+            return true
+        }
+        return false
+    }
     
     
 
