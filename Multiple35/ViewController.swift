@@ -22,11 +22,16 @@ class ViewController: UIViewController {
     var point: Int!
     var time: Float!
     var baseTime: Float!
+    var lapTime: Float!
+    
+    var timer: NSTimer!
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "timerAction", userInfo: nil, repeats: true)
         reset()
         createNumber()
     }
@@ -99,8 +104,8 @@ class ViewController: UIViewController {
     
     func reset() {
         point = 0
-        baseTime = 60
-        
+        baseTime = 20
+        lapTime = 0
     }
     
     func nextTurn(direction:Int) {
@@ -157,6 +162,15 @@ class ViewController: UIViewController {
         return false
     }
     
+    func timerAction() {
+        lapTime = lapTime + 0.1
+        time = floor((baseTime - lapTime) * 10)/10
+        timeLabel.text = "time : " + String(time)
+        NSLog(String(time))
+        if time <= 0 {
+            timer.invalidate()
+        }
+    }
     
 
 }
