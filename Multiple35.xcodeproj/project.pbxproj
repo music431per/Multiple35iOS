@@ -14,6 +14,7 @@
 		06F6E7CA1D77333C0015ACAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F6E7C81D77333C0015ACAA /* LaunchScreen.storyboard */; };
 		06F6E7D51D77333D0015ACAA /* Multiple35Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F6E7D41D77333D0015ACAA /* Multiple35Tests.swift */; };
 		06F6E7E01D77333D0015ACAA /* Multiple35UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F6E7DF1D77333D0015ACAA /* Multiple35UITests.swift */; };
+		06F6E7EE1D78876E0015ACAA /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F6E7ED1D78876E0015ACAA /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		06F6E7DB1D77333D0015ACAA /* Multiple35UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Multiple35UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F6E7DF1D77333D0015ACAA /* Multiple35UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiple35UITests.swift; sourceTree = "<group>"; };
 		06F6E7E11D77333D0015ACAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F6E7ED1D78876E0015ACAA /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				06F6E7BF1D77333C0015ACAA /* AppDelegate.swift */,
 				06F6E7C11D77333C0015ACAA /* ViewController.swift */,
 				06F6E7C31D77333C0015ACAA /* Main.storyboard */,
+				06F6E7ED1D78876E0015ACAA /* ResultViewController.swift */,
 				06F6E7C61D77333C0015ACAA /* Assets.xcassets */,
 				06F6E7C81D77333C0015ACAA /* LaunchScreen.storyboard */,
 				06F6E7CB1D77333C0015ACAA /* Info.plist */,
@@ -259,6 +262,7 @@
 			files = (
 				06F6E7C21D77333C0015ACAA /* ViewController.swift in Sources */,
 				06F6E7C01D77333C0015ACAA /* AppDelegate.swift in Sources */,
+				06F6E7EE1D78876E0015ACAA /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

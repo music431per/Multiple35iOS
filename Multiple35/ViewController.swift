@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.timerAction), userInfo: nil, repeats: true)
         reset()
         createNumber()
     }
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
             positionY = self.numberLabel.frame.origin.y
         }
         UIView.animateWithDuration(
-            0.3,  // アニメーションの時間
+            0.2,  // アニメーションの時間
             animations: {() -> Void in
                 // アニメーションする処理
                 if direction == 1 {
@@ -104,7 +104,7 @@ class ViewController: UIViewController {
     
     func reset() {
         point = 0
-        baseTime = 20
+        baseTime = 60
         lapTime = 0
     }
     
@@ -169,7 +169,13 @@ class ViewController: UIViewController {
         NSLog(String(time))
         if time <= 0 {
             timer.invalidate()
+            self.performSegueWithIdentifier("toResult", sender: nil)
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let resultViewController = segue.destinationViewController as! ResultViewController
+        resultViewController.score = point
     }
     
 
