@@ -51,7 +51,6 @@ class ViewController: UIViewController {
     
     
     // アニメーション処理
-    
     func onAnimation1Click(direction:Int) {
         if positionX == nil {
             positionX = self.numberLabel.frame.origin.x
@@ -62,12 +61,16 @@ class ViewController: UIViewController {
             animations: {() -> Void in
                 // アニメーションする処理
                 if direction == 1 {
+                    // 右から左
                     self.numberLabel.frame.origin.x = -UIScreen.mainScreen().bounds.width
                 } else if direction == 2 {
+                    // 下から上
                     self.numberLabel.frame.origin.y = -UIScreen.mainScreen().bounds.height
                 } else if direction == 3 {
+                    // 左から右
                     self.numberLabel.frame.origin.x = UIScreen.mainScreen().bounds.width
                 } else if direction == 4 {
+                    // 上から下
                     self.numberLabel.frame.origin.y = UIScreen.mainScreen().bounds.height
                 }
             }
