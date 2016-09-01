@@ -138,6 +138,9 @@
                             <outletCollection property="gestureRecognizers" destination="me4-KD-lCt" appends="YES" id="OC5-yO-AUz"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="pip-8F-cdG" id="Zc9-L0-rLI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="DdB-qm-ea9">
@@ -161,7 +164,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="374" y="324"/>
+            <point key="canvasLocation" x="206" y="364"/>
         </scene>
     </scenes>
 </document>
