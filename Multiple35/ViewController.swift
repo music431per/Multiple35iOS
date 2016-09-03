@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     var lapTime: Float!
     
     var timer: NSTimer!
+    var numberAnimationX = CABasicAnimation(keyPath: "position.x")
+    var numberAnimationY = CABasicAnimation(keyPath: "position.y")
     
     
 
@@ -68,32 +70,33 @@ class ViewController: UIViewController {
         if positionX == nil {
             positionX = self.numberLabel.frame.origin.x
             positionY = self.numberLabel.frame.origin.y
+            numberAnimationX.fromValue = positionX
+            numberAnimationY.fromValue = positionY
+            numberAnimationX.duration = 0.3
+            numberAnimationY.duration = 0.3
         }
-        UIView.animateWithDuration(
-            0.2,  // アニメーションの時間
-            animations: {() -> Void in
-                // アニメーションする処理
-                if direction == 1 {
-                    // 右から左
-                    self.numberLabel.frame.origin.x = -UIScreen.mainScreen().bounds.width
-                } else if direction == 2 {
-                    // 下から上
-                    self.numberLabel.frame.origin.y = -UIScreen.mainScreen().bounds.height
-                } else if direction == 3 {
-                    // 左から右
-                    self.numberLabel.frame.origin.x = UIScreen.mainScreen().bounds.width
-                } else if direction == 4 {
-                    // 上から下
-                    self.numberLabel.frame.origin.y = UIScreen.mainScreen().bounds.height
-                }
-            }
-            , completion: {(Bool) -> Void in
-                // アニメーション終了後の処理
-                self.numberLabel.frame.origin.x = self.positionX
-                self.numberLabel.frame.origin.y = self.positionY
-                self.nextTurn(direction)
-                
-        })
+        if direction == 1 {
+            // 右から左
+            numberAnimationX.fromValue = positionX
+            numberAnimationX.toValue = -UIScreen.mainScreen().bounds.width
+            self.numberLabel.layer.addAnimation(numberAnimationX, forKey: nil)
+        } else if direction == 2 {
+            // 下から上
+            numberAnimationY.fromValue = positionY
+            numberAnimationY.toValue = -UIScreen.mainScreen().bounds.height
+            self.numberLabel.layer.addAnimation(numberAnimationY, forKey: nil)
+        } else if direction == 3 {
+            // 左から右
+            numberAnimationX.fromValue = positionX + 35
+            numberAnimationX.toValue = UIScreen.mainScreen().bounds.width + 280
+            self.numberLabel.layer.addAnimation(numberAnimationX, forKey: nil)
+        } else if direction == 4 {
+            // 上から下
+            numberAnimationY.fromValue = positionY + 35
+            numberAnimationY.toValue = UIScreen.mainScreen().bounds.height + 280
+            self.numberLabel.layer.addAnimation(numberAnimationY, forKey: nil)
+        }
+        self.nextTurn(direction)
 
     }
     
@@ -172,6 +175,7 @@ class ViewController: UIViewController {
             self.performSegueWithIdentifier("toResult", sender: nil)
         }
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let resultViewController = segue.destinationViewController as! ResultViewController
